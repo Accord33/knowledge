@@ -1,0 +1,107 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-image: url('https://www.toyo.ac.jp/img/images/bg_fuzoku_base.png');
+}
+.header-4 {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: rgb(227, 227, 227);
+    box-shadow: 0px 2px rgb(154, 154, 154);
+}
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 0 0.8em;
+    margin: 0 auto;
+    font-size: 1.2em;
+}
+.logo a {
+    text-decoration: none;
+    color: #000;
+}
+.logo h1 {
+    font-family: 'Paytone One', sans-serif;
+    font-size: 20px;
+}
+.menu-nav {
+    margin: 0 30px 0 auto;
+}
+.menu-nav ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+}
+.menu-nav li {
+    margin: 0 0 0 15px;
+    font-size: 14px;
+}
+.menu-nav a {
+    text-decoration: none;
+    color: #000;
+
+}
+.header-nav {
+    display: flex;
+    align-items: center;
+}  
+.header-nav-item {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+}
+.header-nav-item .setting-a{
+    height: 30px;
+    width: 50px;
+}
+.header-setting {
+    width: 30px;
+    height: 30px;
+}
+.header-avatar {
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    border-radius: 50%;
+}  
+.userborder {
+    border-left: 1px solid #000;
+}
+.form2 {
+    position: relative;
+}
+.form2-input {
+    box-sizing: border-box;
+    width: 170px;
+    height: 28px;
+    padding: 0 8px 0 30px;
+    margin: 5px 0;
+    margin-right: 30px;
+    font-size: 12px;
+    color: #333;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    outline: 0;
+    transition: 0.3s;
+    -webkit-appearance: none;
+}
+.form2-input:focus {
+    border: 1px solid #00b5ad;
+}
+.form2-button {
+    position: absolute;
+    top: 0;
+    left: 2px;
+    box-sizing: content-box;
+    width: 30px;
+    height: 38px;
+    padding: 0;
+    font-size: 16px;
+    vertical-align: vertical-align;
+    pointer-events: none;
+    background: inherit;
+    border: 0;
+    opacity: 0.54;
+}

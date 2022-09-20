@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2? family= Zen+Maru+Gothic & display=swap');
+main {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+.contents {
+    float: left;
+    width: 70%;
+    margin-right: 30px;
+}
+.right-bar {
+    float: left;
+    width: 30%;
+    border: #000 solid 1px;
+}
+.userdata::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.userdata {
+    margin-bottom: 10px;
+}
+.username {
+    float: left;
+    padding: 0px;
+    margin: 0px;
+}
+.affiliation {
+    float: left;
+    margin: 0px;
+    padding: 0px;
+}
+.datetime {
+    padding: 0px;
+    margin: 0px;
+    color: #6f6f6f;
+}
+.title {
+    padding: 0px;
+    padding-bottom: 30px;
+}
+.tags::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.tags {
+    list-style: none;
+    padding-left: 0px;
+}
+.tag {
+    float: left;
+    color: #fff;
+    background-color: rgb(0, 208, 255);
+    border-radius: 5px;
+    margin-right: 10px;
+    padding: 0px 3px;
+}
+.Text h1 {
+    border-bottom: #dddddd 1.5px solid;
+    padding-bottom: 15px;
+}
+blockquote {
+    border-left: 5px #DDDDDD solid;
+    padding: 20px;
+    background-color: #f5f5f5;
+    color: #414141;
+}
+.Text a {
+    text-decoration: none;
+    color: #5a5aff;
+}
+code {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 5px;
+    border: #CCCCCC 1px solid;
+}

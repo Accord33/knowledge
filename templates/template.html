@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Server</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/contents.css">
+    <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/828286173700816947/976693328487792651/3_20220519125016.png">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/vs.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+</head>
+<body>
+    <header class="header-4">
+        <div class="header-inner">
+            <div class="logo">
+                <a href="{{url_for('main')}}"><h1>Lab Knowledge</h1></a>
+            </div>
+            <nav class="menu-nav">
+                <ul>
+                    <li><a href="{{url_for('NewText')}}">新規作成</a></li>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="header-nav-item">
+                    <form class="form2">
+                        <input type="search" class="form2-input" placeholder="search" />
+                        <button class="form2-button"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="header-nav-item">
+                    <a href="#" class="setting-a">
+                        <img src="/static/img/Setting.png" class="header-setting">
+                    </a>
+                    <div class="userborder"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="contents">
+            <div class="userdata">
+                <p class="username">@{{content["username"]}}</p>
+                <p class="affiliation">&nbsp;&nbsp;所属：{{content["affiliation"]}}</p>
+            </div>
+            <p class="datetime"><i class="fa fa-clock-o"></i> 投稿日{{content["datetime"]}}</p>
+            <ul class="tags">
+                {% for tag in content["tags"] %}
+                <a href="{{url_for('serch_tag',tag=tag)}}"><li class="tag">#{{tag}}</li></a>
+                {% endfor %}
+            </ul>
+            <h1 class="title">{{content["title"]}}</h1>
+            <div class="Text">
+                {{text}}
+            </div>
+        </div>
+        <div class="right-bar">
+            BOX2
+        </div>
+    </main>
+    <bottom></bottom>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

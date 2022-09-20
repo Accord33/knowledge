@@ -1,0 +1,11 @@
+#input-field-wrapper,
+#preview-field-wrapper {
+    height: calc(100vh - 52px);
+    width: 40%;
+}
+#input-field-wrapper #input-field,
+#preview-field-wrapper #preview-field {
+    height: calc(100% - 1rem);
+    overflow-wrap: break-word;
+    overflow: scroll;
+}
