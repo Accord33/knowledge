@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="/static/css/top.css">
     <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/828286173700816947/976693328487792651/3_20220519125016.png">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://dnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+
 </head>
 <body>
     <header class="header-4">
@@ -39,14 +41,24 @@
     </header>
     <main>
         <div class="contents">
-        {% for py_content in datas%}
-            <a href="{{url_for('ronbun',path=py_content['username'],path2=py_content['title'])}}">
-                <div>
-                    <h3>{{py_content["title"]}}</h3>
-                    <p>@{{py_content["username"]}}</p>
-                </div>
-            </a>
-        {% endfor %}
+            {% for py_content in datas%}
+            <div class="py-content">
+                <a href="{{url_for('ronbun',path=py_content['username'],path2=py_content['title'])}}">
+                    <div>
+                        <h3>{{py_content["title"]}}</h3>
+                        <div class="userdata">
+                            <p>@{{py_content["username"]}}</p>
+                            <p>所属：{{py_content["affiliation"]}}</p>
+                        </div>
+                        <div class="tags">
+                            {% for tag in py_content["tags"]%}
+                            <a href="{{url_for('serch_tag',tag=tag)}}"><p>#{{tag}}</p></a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
         </div>
         <div class="right-bar"></div>
     </main>

@@ -14,11 +14,54 @@ main {
 .contents {
     float: left;
     width: 70%;
-    border: #000 solid 1px;
     margin-right: 30px;
+    border-bottom: #bdbbbb 1px solid;
 }
 .right-bar {
     float: left;
     width: 30%;
-    border: #000 solid 1px;
+}
+.py-content {
+    border-top: #bdbbbb 1px solid;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+}
+.py-content h3 {
+    padding: 0px;
+    margin: 0px;
+}
+.py-content p {
+    padding: 0px;
+    margin: 0px;
+    font-size: 13px;
+}
+a {
+    text-decoration: none;
+    color: #2c3e50;
+}
+.userdata {
+    content: "";
+    display: block;
+    clear: both;
+}
+.userdata p {
+    float: left;
+    margin-right: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.tags {
+    content: "";
+    display: block;
+    padding-bottom: 15px;
+    clear: both;
+}
+.tags p {
+    float: left;
+    background-color: rgb(0, 208, 255);
+    border-radius: 5px;
+    margin-right: 10px;
+    padding: 0px 3px;
+    color: #fff;
 }
