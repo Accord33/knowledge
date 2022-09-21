@@ -20,7 +20,6 @@ main {
 .right-bar {
     float: left;
     width: 30%;
-    border: #000 solid 1px;
 }
 .userdata::after {
     content: "";

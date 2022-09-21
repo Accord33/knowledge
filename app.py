@@ -34,7 +34,7 @@ def upload():
         "title":title,
         "username":username,
         "affiliation":affiliation,
-        "text":markdown(text),
+        "text":text,
         "tags":tags,
         "datetime":f"{date.year}/{date.month}/{date.day}"
         }
@@ -54,10 +54,10 @@ def ronbun(path,path2):
     database = json.load(f)
     for i in database:
         if i["username"] == path and i["title"] == path2:
-            return render_template("template.html",content=i,text=Markup(i["text"]))
+            return render_template("template.html",content=i,text=Markup(markdown(i["text"])))
     return "<h1>Not Found</h1>\n<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>"
 
-@app.route("/tags/<string:tag>")
+@app.route("/suuri/tags/<string:tag>")
 def serch_tag(tag):
     with open("database.json") as f:
         database = json.load(f)
